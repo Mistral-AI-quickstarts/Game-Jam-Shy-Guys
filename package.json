@@ -1,0 +1,18 @@
+{
+  "name": "shyguys-wingman-js",
+  "version": "1.0.0",
+  "description": "ShyguysWingmanJS project",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "elevenlabs": "^1.50.4"
+  },
+  "devDependencies": {
+    "vite": "^6.0.11"
+  }
+}

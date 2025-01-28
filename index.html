@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shyguy's Wingman</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <!-- Font Awesome for microphone icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="intro-view active" id="introView">
+      <div class="intro-content">
+        <img src="/assets/assets/intro-image.jpg" alt="Game Intro" class="intro-image" />
+        <button id="startGameBtn" class="start-game-button">Start Game</button>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <div class="status-text" id="statusText"></div>
+    </div>
+
+    <div class="game-view active" id="gameView">
+      <div class="container">
+        <div class="game-section">
+          <canvas id="gameCanvas"></canvas>
+        </div>
+        <div class="chat-section">
+          <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be added here -->
+          </div>
+          <div class="input-area">
+            <textarea id="messageInput" placeholder="Type your message here..." rows="3"></textarea>
+            <div class="button-group">
+              <button id="sendButton" class="send-button">Send</button>
+              <button id="micButton" class="mic-button">
+                <i class="fas fa-microphone"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialogue-view" id="dialogueView">
+      <div class="character-section">
+        <div class="character left-character">
+          <img id="leftCharacterImg" class="character-img" />
+        </div>
+        <div class="dialogue-box">
+          <div class="dialogue-messages" id="dialogueMessages">
+            <!-- Dialogue messages will be added here -->
+          </div>
+          <div class="loading-indicator"><span>Loading</span><span class="loading-dots"></span></div>
+        </div>
+        <div class="character right-character">
+          <img id="rightCharacterImg" class="character-img" />
+        </div>
+      </div>
+      <div class="dialogue-controls">
+        <button id="dialogueContinueButton" class="continue-button">Continue</button>
+        <button id="dialogueNextButton" class="next-button">Next</button>
+      </div>
+    </div>
+
+    <div class="game-over-view" id="gameOverView">
+      <div class="game-over-content">
+        <img id="gameOverImage" class="game-over-image" src="" alt="Game Over" />
+        <div class="game-over-text" id="gameOverText">
+          <!-- Text will be set via JS -->
+        </div>
+        <div class="game-over-controls">
+          <button id="playAgainBtn" class="play-again-button">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="debug-controls" id="debugControls">
+      <div class="game-controls">
+        <button id="targetDoorBtn" class="debug-button">Target Door</button>
+        <button id="targetGirlBtn" class="debug-button">Target Girl</button>
+        <button id="targetBarBtn" class="debug-button">Target Bar</button>
+        <button id="targetDjBtn" class="debug-button">Target Dj</button>
+        <button id="targetSisterBtn" class="debug-button">Target Sister</button>
+        <button id="stopNavBtn" class="debug-button">Stop Navigation</button>
+        <button id="togglePushBtn" class="debug-button">Enable Push</button>
+        <button id="speedBoostBtn" class="debug-button">Speed Boost</button>
+        <button id="toggleVoiceBtn" class="debug-button">Enable Voice</button>
+      </div>
+    </div>
+    <script src="./src/index.js" type="module"></script>
+  </body>
+</html>
